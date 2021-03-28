@@ -1,0 +1,3 @@
+[submodule "CardinalEngine"]
+	path = CardinalEngine
+	url = https://github.com/Floating-Point-Studios/CardinalEngine

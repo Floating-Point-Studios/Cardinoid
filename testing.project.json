@@ -1,0 +1,28 @@
+{
+  "name": "CardinalEngine - Cardinoid Testing",
+  "tree": {
+    "$className": "DataModel",
+
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+
+      "CardinalEngine": {
+        "$path": "CardinalEngine"
+      }
+    },
+
+    "ServerStorage": {
+        "$className": "ServerStorage",
+
+        "CardinalPackages": {
+            "$ignoreUnknownInstances": true,
+            "$className": "Folder",
+
+            "Cardinoid": {
+                "$path": "src"
+            }
+        }
+    }
+
+  }
+}

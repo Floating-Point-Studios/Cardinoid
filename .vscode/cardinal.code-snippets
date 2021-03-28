@@ -1,0 +1,154 @@
+{
+	"New class": {
+		"prefix": "@class",
+		"body": [
+			"local ${1:${TM_FILENAME/[.].+/$1/}} = {",
+			"\tClassName = \"$1\",",
+			"\tExtendable = ${2:true},",
+			"\tReplicable = ${3:true},",
+			"\tMethods = {},",
+			"\tEvents = {}",
+			"}",
+			"",
+			"function $1:Constructor()",
+			"\t",
+			"end",
+			"",
+			"function $1:Deconstructor()",
+			"\t",
+			"end",
+			"",
+			"function $1:start()",
+			"\tself.PrivateProperties = {}",
+			"",
+			"\tself.PublicReadOnlyProperties = {}",
+			"",
+			"\tself.PublicReadAndWriteProperties = {}",
+			"",
+			"\treturn self:Load(\"Deus.BaseObject\").new(self)",
+			"end",
+			"",
+			"return $1"
+		],
+		"description": "Creates a class"
+	},
+
+	"New simple class": {
+		"prefix": "@classSimple",
+		"body": [
+			"local ${1:${TM_FILENAME/[.].+/$1/}} = {",
+			"\tClassName = \"$1\"",
+			"}",
+			"",
+			"function $1:Constructor()",
+			"\t",
+			"end",
+			"",
+			"function $1:Deconstructor()",
+			"\t",
+			"end",
+			"",
+			"function $1:start()",
+			"\treturn self:Load(\"Deus.BaseObject\").newSimple(self)",
+			"end",
+			"",
+			"return $1"
+		],
+		"description": "Creates a class"
+	},
+
+	"New service": {
+		"prefix": "@service",
+		"body": [
+			"local ${1:${TM_FILENAME/[.].+/$1/}} = {}",
+			"",
+			"function $1:start()",
+			"\t",
+			"end",
+			"",
+			"return $1"
+		],
+		"description": "Creates a service"
+	},
+
+	"New module": {
+		"prefix": "@module",
+		"body": [
+			"local ${1:${TM_FILENAME/[.].+/$1/}} = {}",
+			"",
+			"function $1:start()",
+			"\t",
+			"end",
+			"",
+			"function $1:init()",
+			"\t",
+			"end",
+			"",
+			"return $1"
+		],
+		"description": "Creates a module"
+	},
+
+	"New enum": {
+		"prefix": "@enum",
+		"body": [
+			"local ${1:${TM_FILENAME/[.].+/$1/}} = {}",
+			"",
+			"function $1:start()",
+			"\treturn self:Load(\"Deus.Enumeration\").addEnum(",
+			"\t\"\",",
+			"\t\t{",
+			"\t\t",
+			"\t\t}",
+			"\t)",
+			"end",
+			"",
+			"return $1"
+		],
+		"description": "Creates a module"
+	},
+
+	"New DataType": {
+		"prefix": "@datatype",
+		"body": [
+			"local ${1:${TM_FILENAME/[.].+/$1/}} = {",
+			"\tName = \"$1\",",
+			"\tMethods = {},",
+			"\tMetamethods = {},",
+			"}",
+			"",
+			"function $1:Constructor()",
+			"\t",
+			"end",
+			"",
+			"function $1:start()",
+			"\tself.PublicValues = {}",
+			"",
+			"\tself.ReadOnlyValues = {}",
+			"",
+			"\treturn self:Load(\"Deus.DataType\").new(self)",
+			"end",
+			"",
+			"return $1"
+		],
+		"description": "Creates a DataType"
+	},
+
+	"Assert": {
+		"prefix": ["assert", "Output.assert()"],
+		"body": "Output.assert($1)",
+		"description": "Calls Assert using Output"
+	},
+
+	"Error": {
+		"prefix":["error", "Output.error()"],
+		"body": "Output.error(\"$1\")",
+		"description": "Calls Error using Output"
+	},
+
+	"Warn": {
+		"prefix": ["warn", "Output.warn()"],
+		"body": "Output.warn(\"$1\")",
+		"description": "Calls Warn using Output"
+	},
+}

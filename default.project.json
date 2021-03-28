@@ -1,8 +1,6 @@
 {
   "name": "Cardinoid",
   "tree": {
-    "$className": "Folder",
-
     "$path": "src"
   }
 }

@@ -228,7 +228,7 @@ function StateController:start()
 
     CharacterState = self:Load("Deus.Enumeration").CharacterState
 
-    local None = self:Load("Deus.Symbol").new("None")
+    local None = self:Load("Deus.Symbol").get("None")
 
     self.PrivateProperties = {
         Agent = None,

@@ -331,7 +331,7 @@ function Cardinoid:start()
     CharacterState = self:WrapModule(script.CharacterState, true, true)
     StateController = self:WrapModule(script.StateController, true, true)
 
-    local None = self:Load("Deus.Symbol").new("None")
+    local None = self:Load("Deus.Symbol").get("None")
 
     self.PrivateProperties = {
         PreSimConnection = None,

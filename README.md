@@ -4,7 +4,7 @@ Cardinoid is the [CardinalEngine](https://github.com/Floating-Point-Studios/Card
 
 ## Usage
 
-More detailed documentation will be available at a later date.
+More detailed documentation available [here](https://floating-point-studios.github.io/CardinalEngine/latest/CardinalEngine/Libraries/cardinoid/).
 
 Any rigged character such as ones created by the "Rig Builder" plugin in Studio can be mounted to Cardinoid with the `MountRig(rig)` method. To unmount the rig use `UnmountRig()`.
 

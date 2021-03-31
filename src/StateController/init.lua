@@ -230,7 +230,7 @@ function StateController:start()
 
     local None = self:Load("Deus.Symbol").get("None")
 
-    self.PrivateProperties = {
+    self.Private = {
         Agent = None,
 
         RaycastParams = None,
@@ -240,9 +240,9 @@ function StateController:start()
         CurrentAccelerationZ = 0
     }
 
-    self.PublicReadOnlyProperties = {}
+    self.Readable = {}
 
-    self.PublicReadAndWriteProperties = {}
+    self.Writable = {}
 
     return self:Load("Deus.BaseObject").new(self)
 end

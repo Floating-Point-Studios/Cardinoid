@@ -163,7 +163,7 @@ function Cardinoid:Constructor(...)
     end
 end
 
-function Cardinoid:Deconstructor()
+function Cardinoid:Destructor()
     self.Aligner.Attachment1:Destroy()
     self.Character:Destroy()
     self.StateController:Destroy()
@@ -335,7 +335,7 @@ function Cardinoid:start()
 
     local None = self:Load("Deus.Symbol").get("None")
 
-    self.PrivateProperties = {
+    self.Private = {
         PreSimConnection = None,
 
         Mover = None,
@@ -351,7 +351,7 @@ function Cardinoid:start()
         RigParts = {}
     }
 
-    self.PublicReadOnlyProperties = {
+    self.Readable = {
         Character = None,
 
         LastState = CharacterState.Idling,
@@ -363,7 +363,7 @@ function Cardinoid:start()
         RootPart = None
     }
 
-    self.PublicReadAndWriteProperties = {
+    self.Writable = {
         Health = 100,
         MaxHealth = 100,
         WalkSpeed = 16,

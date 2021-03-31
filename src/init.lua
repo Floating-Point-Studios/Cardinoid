@@ -51,6 +51,7 @@ function Cardinoid:Constructor(...)
         self.Aligner = humanoidRootPart.CardinoidAligner
         self.Animator = character.AnimationController.Animator
         self.Character = character
+        self.RootPart = humanoidRootPart
     else
         -- We are creating a new character
 
@@ -106,6 +107,7 @@ function Cardinoid:Constructor(...)
         self.Aligner = alignOrientation
         self.Animator = animator
         self.Character = character
+        self.RootPart = humanoidRootPart
     end
 
     -- Set stats
@@ -344,7 +346,9 @@ function Cardinoid:start()
 
         MoveToPosition = None,
         MoveToTimeout = 0,
-        MoveToTick = 0
+        MoveToTick = 0,
+
+        RigParts = {}
     }
 
     self.PublicReadOnlyProperties = {
@@ -356,7 +360,7 @@ function Cardinoid:start()
         PlayingAnimations = {},
         AnimationTracks = {},
 
-        RigParts = {}
+        RootPart = None
     }
 
     self.PublicReadAndWriteProperties = {
